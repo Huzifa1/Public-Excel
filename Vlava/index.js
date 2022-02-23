@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/data')
+fetch('https://training20220213a.herokuapp.com/huzifa')
   .then(response => response.json())
   .then(json => {
       var RH = document.getElementById('RH');
@@ -11,9 +11,9 @@ fetch('http://localhost:3000/data')
       {
           var MyContent = document.createElement('div');
           var CustomisedContent = OriginalContent;
-          CustomisedContent = CustomisedContent.replace('FADY',json[i].title);
-          CustomisedContent = CustomisedContent.replace('CHRIST',json[i].description);
-          CustomisedContent = CustomisedContent.replace('MANGALA',json[i].icon);
+          CustomisedContent = CustomisedContent.replace('FADY',json[i].id);
+          CustomisedContent = CustomisedContent.replace('CHRIST',json[i].name);
+          CustomisedContent = CustomisedContent.replace('MANGALA',"bi bi-facebook");
           MyContent.className='col-lg-4 col-md-6 icon-box'
           MyContent.innerHTML = CustomisedContent;
           RH.appendChild(MyContent);
